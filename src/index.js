@@ -10,7 +10,9 @@ let host, port, pass, tcp, challenge,id,command
 
 app.use(bodyParser.urlencoded({ extended: true }))
 
-
+app.get('/', function (req, res) {
+  return res.json({hello: 'world'});
+});
 
 app.post('/', (req, res) => {
 
