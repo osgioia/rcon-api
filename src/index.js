@@ -4,6 +4,8 @@ const readline = require('readline');
 const rcon = require('rcon');
 const app = express()
 
+const server_host = '0.0.0.0';
+const server_port = process.env.PORT || 3000;
 
 
 let host, port, pass, tcp, challenge,id,command
@@ -96,4 +98,4 @@ app.post('/', (req, res) => {
 
 });
 
-app.listen(3000, () => console.log(`Started server at http://localhost:3000!`));
+app.listen(server_port, server_host, () => console.log(`Started server at http://localhost!`));
